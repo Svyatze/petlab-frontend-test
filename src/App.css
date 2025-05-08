@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f6f7f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.App-header {
+  background-color: #293e65;
+  color: white;
+  padding: 15px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+}
+
+.App-main {
+  padding: 20px 0;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-layout {
+  display: flex;
+  gap: 30px;
+}
+
+.filters-container {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.filters-sidebar {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filters-sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.filter-section input,
+.filter-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.reset-filters-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #edf2f7;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.reset-filters-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.products-container {
+  flex-grow: 1;
+}
+
+.products-count {
+  margin-left: 8px;
+  margin-bottom: 10px;
+  color: #718096;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.products-table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table th {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 12px;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.products-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.products-table tr:last-child td {
+  border-bottom: none;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  background-color: #f7fafc;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-details h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.product-details p {
+  font-size: 13px;
+  color: #718096;
+}
+
+.subscription-col {
+  font-weight: 500;
+}
+
+.subscription-col.yes {
+  color: #48bb78;
+}
+
+.subscription-col.no {
+  color: #4a5568;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  background-color: #edf2f7;
+  color: #4a5568;
+}
+
+.tag-animal {
+  background-color: #ebf8ff;
+  color: #3182ce;
+}
+
+.tag-chews {
+  background-color: #feebc8;
+  color: #dd6b20;
+}
+
+.tag-formula {
+  background-color: #e9d8fd;
+  color: #805ad5;
+}
+
+.tag-shampoo {
+  background-color: #c6f6d5;
+  color: #38a169;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.pagination-btn {
+  padding: 8px 15px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #edf2f7;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.loading, .error, .no-products-message {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  color: #e53e3e;
+}
+
+@media (max-width: 768px) {
+  .product-layout {
+    flex-direction: column;
+  }
+
+  .filters-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .product-col {
+    max-width: 200px;
+  }
+}
